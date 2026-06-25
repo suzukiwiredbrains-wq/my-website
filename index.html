@@ -12,11 +12,11 @@
 
 :root{
   --base:#FAF7F2;
-  --card:#EFE7DA;
-  --primary:#B8835A;
-  --primary-d:#96633A;
-  --navy:#0A0A69;
-  --navy-d:#080852;
+  --card:#F0EDE8;
+  --primary:#D96920;
+  --primary-d:#B85518;
+  --navy:#5B4D9A;
+  --navy-d:#4A3C88;
   --text:#2D2A26;
   --muted:#7A6A56;
   --border:#DDD3C2;
@@ -31,7 +31,7 @@ body{
   color:var(--text);
   font-size:16px;
   line-height:1.75;
-  padding-bottom:76px; /* floating CTA */
+  padding-bottom:76px;
 }
 
 img{max-width:100%;height:auto;display:block}
@@ -66,15 +66,8 @@ section{padding:60px 0}
 .sec-center{text-align:center}
 
 /* ── Logo ── */
-.logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo-hex{
-  width:40px;height:40px;background:var(--navy);
-  clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
-  display:flex;align-items:center;justify-content:center;
-  color:#fff;font-size:11px;font-weight:700;flex-shrink:0;
-}
-.logo-main{font-size:17px;font-weight:700;color:var(--navy);display:block}
-.logo-sub {font-size:11px;color:var(--muted);display:block}
+.logo-wrap{display:flex;align-items:center;text-decoration:none}
+.logo-img{height:44px;width:auto;max-width:220px;object-fit:contain}
 
 /* ══════════════════════════
    1. HEADER
@@ -85,26 +78,34 @@ header{
 }
 header .container{display:flex;align-items:center;justify-content:space-between;gap:12px}
 
+/* SP: tel上・hours下 */
 .header-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
 
 .hours-badge{
   display:inline-flex;align-items:center;gap:6px;
   background:var(--card);color:var(--muted);font-size:11px;
   padding:4px 10px;border-radius:20px;font-weight:500;white-space:nowrap;
+  order:2; /* SP: tel(1)の下 */
 }
 .hours-badge .dot{width:6px;height:6px;border-radius:50%;background:#4CAF50;flex-shrink:0}
 
 .header-tel{
-  display:inline-flex;align-items:center;gap:6px;
-  background:var(--primary);color:#fff;font-size:13px;font-weight:700;
-  padding:8px 14px;border-radius:6px;text-decoration:none;min-height:44px;transition:opacity .2s;
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--primary);color:#fff;font-size:15px;font-weight:700;
+  padding:8px 20px;border-radius:6px;text-decoration:none;min-height:44px;transition:opacity .2s;
+  order:1; /* SP: 最上 */
 }
 .header-tel:hover{opacity:.85}
 
 /* ══════════════════════════
    2. HERO
 ══════════════════════════ */
-#hero{padding:0;overflow:hidden}
+#hero{
+  padding:0;overflow:hidden;
+  background-image:url('assets/background/hero-bg-pc.webp');
+  background-size:cover;
+  background-position:center top;
+}
 
 .hero-inner{display:flex;flex-direction:column}
 
@@ -115,7 +116,7 @@ header .container{display:flex;align-items:center;justify-content:space-between;
   font-size:12px;padding:5px 14px;border-radius:20px;margin-bottom:20px;font-weight:500;
 }
 .hero-sub  {font-size:clamp(18px,4vw,24px);font-weight:700;color:var(--muted);margin-bottom:6px;line-height:1.3}
-.hero-title{font-size:clamp(34px,8vw,52px);font-weight:700;line-height:1.2;color:var(--text);margin-bottom:22px}
+.hero-title{font-size:clamp(38px,9vw,60px);font-weight:700;line-height:1.2;color:var(--text);margin-bottom:22px}
 .hero-title .accent{color:var(--primary)}
 .hero-body {font-size:14px;color:var(--muted);line-height:1.9;margin-bottom:32px}
 .hero-note {font-size:12px;color:var(--muted);text-align:center;margin-top:12px}
@@ -124,7 +125,7 @@ header .container{display:flex;align-items:center;justify-content:space-between;
   background:var(--card);display:flex;align-items:center;justify-content:center;
   min-height:280px;overflow:hidden;
 }
-.hero-image img{max-height:340px;object-fit:contain;padding:28px}
+.hero-image img{max-height:340px;object-fit:contain;padding:12px}
 
 /* ══════════════════════════
    3. PRICE TABLE
@@ -135,23 +136,22 @@ header .container{display:flex;align-items:center;justify-content:space-between;
 
 .price-card{
   background:var(--card);border-radius:12px;padding:20px;
-  display:flex;gap:16px;align-items:center;
+  display:flex;flex-direction:row;gap:20px;align-items:center;
   box-shadow:0 2px 8px rgba(0,0,0,.06);
 }
 .price-card-img{
-  width:84px;height:84px;flex-shrink:0;background:var(--base);
-  border-radius:8px;display:flex;align-items:center;justify-content:center;padding:6px;overflow:hidden;
+  width:120px;height:120px;flex-shrink:0;background:var(--base);
+  border-radius:8px;overflow:hidden;
 }
-.price-card-img img{max-height:72px;object-fit:contain}
+.price-card-img img{width:100%;height:100%;object-fit:contain}
 .price-card-name{font-size:17px;font-weight:700;margin-bottom:3px}
 .price-card-ref {font-size:12px;color:var(--muted);margin-bottom:10px}
 .price-card-val {font-size:22px;font-weight:700;color:var(--primary)}
 .price-card-val small{font-size:13px;font-weight:400;color:var(--muted)}
 
 .price-gmt{
-  background:var(--base);border:1.5px dashed var(--border);border-radius:10px;
-  padding:16px 20px;font-size:14px;color:var(--muted);text-align:center;font-weight:500;
-  margin-top:4px;
+  font-size:14px;color:var(--muted);text-align:center;font-weight:500;
+  margin-top:8px;
 }
 .price-note{font-size:12px;color:var(--muted);margin-top:14px}
 
@@ -179,6 +179,7 @@ header .container{display:flex;align-items:center;justify-content:space-between;
 
 /* ══════════════════════════
    5. REASONS + FLOW
+   ※ 常に1カラム（PC/SP同じ）
 ══════════════════════════ */
 #reasons{background:var(--white)}
 
@@ -238,18 +239,20 @@ header .container{display:flex;align-items:center;justify-content:space-between;
 .brand-en{font-size:13px;font-weight:700;color:var(--text);line-height:1.3}
 .brand-ja{font-size:11px;color:var(--muted);margin-top:2px}
 
+/* ※ 白ベタ背景なし */
 .brands-note{
-  margin-top:18px;font-size:13px;color:var(--muted);
-  background:var(--white);border-radius:8px;padding:16px 18px;line-height:1.8;
+  margin-top:18px;font-size:13px;color:var(--muted);line-height:1.8;
 }
 
 /* ══════════════════════════
    7. ACCESS
+   ※ PC/SP 常に1カラム
 ══════════════════════════ */
 #access{background:var(--white)}
 
+/* 店舗画像：全体が見えるよう高さ固定なし */
 .access-photo{border-radius:12px;overflow:hidden;margin-bottom:24px}
-.access-photo img{width:100%;height:220px;object-fit:cover}
+.access-photo img{width:100%;height:auto;display:block;object-fit:contain}
 
 table.info-tbl{width:100%;border-collapse:collapse;font-size:14px}
 table.info-tbl tr{border-bottom:1px solid var(--border)}
@@ -258,11 +261,11 @@ table.info-tbl th{padding:13px 0;color:var(--muted);font-weight:500;width:76px;v
 table.info-tbl td{padding:13px 0}
 table.info-tbl a{color:var(--primary);font-weight:700;text-decoration:none}
 
-.map-box{
-  background:var(--card);border-radius:12px;height:220px;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  color:var(--muted);font-size:13px;gap:8px;border:2px dashed var(--border);
-  margin-bottom:16px;
+.map-embed{
+  border-radius:12px;overflow:hidden;margin-top:28px;margin-bottom:16px;
+}
+.map-embed iframe{
+  display:block;width:100%;height:380px;border:0;
 }
 
 /* ══════════════════════════
@@ -294,7 +297,7 @@ table.info-tbl a{color:var(--primary);font-weight:700;text-decoration:none}
 #footer-cta .btn{max-width:360px}
 
 footer{
-  background:#06063F;padding:28px 0;text-align:center;
+  background:#2E2560;padding:28px 0;text-align:center;
   font-size:12px;color:rgba(255,255,255,.45);
 }
 footer p{margin-bottom:5px}
@@ -319,34 +322,37 @@ footer p{margin-bottom:5px}
   body{padding-bottom:0}
   section{padding:80px 0}
 
+  /* ヘッダー：hours左・tel右の横並び */
+  .header-right{flex-direction:row;align-items:center;gap:12px}
+  .hours-badge{order:1}
+  .header-tel  {order:2}
+
+  /* ヒーロー */
   .hero-inner{flex-direction:row;align-items:stretch;min-height:500px}
   .hero-text{padding:60px 52px 60px 0;margin:0;flex:1;max-width:none}
   .hero-image{flex:0 0 46%;min-height:420px}
-  .hero-image img{max-height:100%;height:100%}
+  .hero-image img{max-height:100%;height:100%;padding:0}
 
+  /* ヒーローCTAボタン幅統一 */
   .btn-group{flex-direction:row}
   .btn{width:auto}
+  .hero-text .btn-group .btn{flex:1;min-width:0}
 
-  .price-cards{flex-direction:row;gap:20px}
-  .price-card{flex:1;flex-direction:column;text-align:center}
-  .price-card-img{margin:0 auto 14px;width:100px;height:100px}
-  .price-card-img img{max-height:86px}
+  /* 相場カード：SP同様の横並び維持、画像を大きく */
+  .price-cards{flex-direction:row;gap:24px}
+  .price-card{flex:1}
+  .price-card-img{width:150px;height:150px}
 
+  /* こんなこと */
   .concern-grid{grid-template-columns:repeat(3,1fr)}
 
-  .rf-wrap{flex-direction:row;gap:48px}
-  .rf-block{flex:1}
-
+  /* ブランドグリッド */
   .brand-grid{grid-template-columns:repeat(4,1fr)}
 
-  .access-cols{display:flex;gap:36px}
-  .access-cols > *{flex:1}
-  .access-photo{margin-bottom:0;height:200px}
-  .access-photo img{height:200px}
-  .map-box{height:260px;margin-bottom:16px}
-
+  /* フッターCTA */
   #footer-cta .btn-group{flex-direction:row;justify-content:center}
 
+  /* フローティングCTA */
   .floating-cta{
     left:auto;bottom:24px;right:24px;
     flex-direction:column;width:200px;
@@ -357,7 +363,8 @@ footer p{margin-bottom:5px}
 }
 
 @media(min-width:1024px){
-  .price-cards{gap:28px}
+  .price-cards{gap:32px}
+  .price-card-img{width:170px;height:170px}
 }
 </style>
 </head>
@@ -369,19 +376,17 @@ footer p{margin-bottom:5px}
 <header>
   <div class="container">
     <a href="#" class="logo-wrap">
-      <div class="logo-hex">大吉</div>
-      <div>
-        <span class="logo-main">買取大吉</span>
-        <span class="logo-sub">郡山コスモス通り店</span>
-      </div>
+      <img src="assets/logo/daikichi_logo.png" alt="買取大吉 郡山コスモス通り店" class="logo-img">
     </a>
     <div class="header-right">
+      <!-- SP: tel(order:1)が上、hours(order:2)が下 -->
+      <!-- PC: hours(order:1)が左、tel(order:2)が右 -->
       <span class="hours-badge">
         <span class="dot"></span>
         10:00–19:00 ／ 日曜定休
       </span>
       <a href="tel:024-973-6661" class="header-tel">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
         024-973-6661
       </a>
     </div>
@@ -395,19 +400,18 @@ footer p{margin-bottom:5px}
   <div class="hero-inner container">
     <div class="hero-text">
       <span class="hero-eyebrow">ロレックス売却をご検討の方へ</span>
-      <p class="hero-sub">ピークは、過ぎた。</p>
-      <h1 class="hero-title">ロレックス、<br><span class="accent">今が売り時？</span></h1>
+      <p class="hero-sub">下がりはじめた、今</p>
+      <h1 class="hero-title">高値の余韻が<br><span class="accent">あるうちに。</span></h1>
       <p class="hero-body">
-        2022年の高騰相場から、足元はゆるやかに下落。<br>
-        高値のうちが、ひとつの売り時です。<br>
-        まずは査定だけでも、お気軽にどうぞ。
+        2022年のピークから足元は1〜2割ほど調整。<br>
+        まだ高水準のうちが動きどきです。
       </p>
       <div class="btn-group">
         <a href="tel:024-973-6661" class="btn btn-primary">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
           電話で査定・来店予約
         </a>
-        <a href="https://share.google/IbIZj6Jhbqv5SJjpZ" target="_blank" rel="noopener" class="btn btn-outline">
+        <a href="https://maps.app.goo.gl/JVGkbCxjWVFBD9zG9" target="_blank" rel="noopener" class="btn btn-outline">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Googleマップでルートを検索
         </a>
@@ -452,7 +456,7 @@ footer p{margin-bottom:5px}
         </div>
       </div>
     </div>
-    <div class="price-gmt">＋ GMTマスターII など他モデルもお気軽にご相談ください</div>
+    <p class="price-gmt">＋ GMTマスターII など他モデルもお気軽にご相談ください</p>
     <p class="price-note">※上記は相場目安です。確定金額は査定にてご案内します。</p>
   </div>
 </section>
@@ -508,7 +512,7 @@ footer p{margin-bottom:5px}
 </section>
 
 <!-- ══════════════════════
-     5. REASONS + FLOW
+     5. REASONS + FLOW（1カラム）
 ══════════════════════ -->
 <section id="reasons">
   <div class="container">
@@ -607,15 +611,15 @@ footer p{margin-bottom:5px}
       <div class="brand-item"><div class="brand-en">AUDEMARS<br>PIGUET</div><div class="brand-ja">オーデマ ピゲ</div></div>
       <div class="brand-item"><div class="brand-en">GRAND<br>SEIKO</div><div class="brand-ja">グランドセイコー</div></div>
     </div>
-    <div class="brands-note">
+    <p class="brands-note">
       ＋ パテック フィリップなど上記以外のブランドもお気軽に。<br>
       動かない・保証書なし・付属品なしでもご相談OK。
-    </div>
+    </p>
   </div>
 </section>
 
 <!-- ══════════════════════
-     7. ACCESS
+     7. ACCESS（1カラム）
 ══════════════════════ -->
 <section id="access">
   <div class="container">
@@ -623,31 +627,27 @@ footer p{margin-bottom:5px}
       <span class="sec-label">STORE INFO</span>
       <h2 class="sec-title">店舗情報・アクセス</h2>
     </div>
-    <div class="access-cols">
-      <div>
-        <div class="access-photo">
-          <img src="assets/store/storefront_main.jpg" alt="買取大吉 郡山コスモス通り店 外観" loading="lazy">
-        </div>
-        <table class="info-tbl" style="margin-top:20px">
-          <tr><th>店舗名</th><td>買取大吉 郡山コスモス通り店</td></tr>
-          <tr><th>電話</th><td><a href="tel:024-973-6661">024-973-6661</a></td></tr>
-          <tr><th>住所</th><td>〒963-0205<br>福島県郡山市堤3丁目136 小林ビル102</td></tr>
-          <tr><th>営業時間</th><td>10:00〜19:00</td></tr>
-          <tr><th>定休日</th><td>日曜日</td></tr>
-        </table>
-      </div>
-      <div>
-        <!-- TODO: Google Maps iframe embed -->
-        <div class="map-box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Googleマップ埋め込み枠（後日実装）
-        </div>
-        <a href="https://share.google/IbIZj6Jhbqv5SJjpZ" target="_blank" rel="noopener" class="btn btn-outline">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Googleマップでルートを検索
-        </a>
-      </div>
+
+    <div class="access-photo">
+      <img src="assets/store/storefront_main.jpg" alt="買取大吉 郡山コスモス通り店 外観" loading="lazy">
     </div>
+
+    <table class="info-tbl">
+      <tr><th>店舗名</th><td>買取大吉 郡山コスモス通り店</td></tr>
+      <tr><th>電話</th><td><a href="tel:024-973-6661">024-973-6661</a></td></tr>
+      <tr><th>住所</th><td>〒963-0205<br>福島県郡山市堤3丁目136 小林ビル102</td></tr>
+      <tr><th>営業時間</th><td>10:00〜19:00</td></tr>
+      <tr><th>定休日</th><td>日曜日</td></tr>
+    </table>
+
+    <div class="map-embed">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1968.9959401219805!2d140.33267710129962!3d37.39756133120657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6020138825509ba1%3A0x4fef8675d3de600e!2z6LK35Y-W5aSn5ZCJIOmDoeWxseOCs-OCueODouOCuemAmuOCiuW6lw!5e0!3m2!1sja!2sjp!4v1782377793624!5m2!1sja!2sjp" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+
+    <a href="https://maps.app.goo.gl/JVGkbCxjWVFBD9zG9" target="_blank" rel="noopener" class="btn btn-outline">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Googleマップでルートを検索
+    </a>
   </div>
 </section>
 
@@ -679,7 +679,7 @@ footer p{margin-bottom:5px}
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
         電話で査定・来店予約
       </a>
-      <a href="https://share.google/IbIZj6Jhbqv5SJjpZ" target="_blank" rel="noopener" class="btn btn-outline">
+      <a href="https://maps.app.goo.gl/JVGkbCxjWVFBD9zG9" target="_blank" rel="noopener" class="btn btn-outline">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         Googleマップでルートを検索
       </a>
@@ -708,7 +708,7 @@ footer p{margin-bottom:5px}
     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
     電話する
   </a>
-  <a href="https://share.google/IbIZj6Jhbqv5SJjpZ" target="_blank" rel="noopener" class="btn btn-navy">
+  <a href="https://maps.app.goo.gl/JVGkbCxjWVFBD9zG9" target="_blank" rel="noopener" class="btn btn-navy">
     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
     Googleマップ
   </a>
