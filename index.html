@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ロレックス高価買取｜買取大吉 郡山コスモス通り店</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --base:#FAF7F2;
+  --card:#EFE7DA;
+  --primary:#B8835A;
+  --primary-d:#96633A;
+  --navy:#0A0A69;
+  --navy-d:#080852;
+  --text:#2D2A26;
+  --muted:#7A6A56;
+  --border:#DDD3C2;
+  --white:#FFFFFF;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:'Noto Sans JP',sans-serif;
+  background:var(--base);
+  color:var(--text);
+  font-size:16px;
+  line-height:1.75;
+  padding-bottom:76px; /* floating CTA */
+}
+
+img{max-width:100%;height:auto;display:block}
+
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* ── Buttons ── */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:15px 24px;border-radius:8px;font-weight:700;font-size:15px;
+  text-decoration:none;text-align:center;cursor:pointer;border:none;
+  min-height:52px;transition:opacity .2s,transform .15s;width:100%;
+}
+.btn:hover{opacity:.85}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-navy   {background:var(--navy);color:#fff}
+.btn-outline{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+.btn-outline:hover{background:var(--navy);color:#fff;opacity:1}
+
+.btn-group{display:flex;flex-direction:column;gap:12px}
+
+/* ── Section common ── */
+section{padding:60px 0}
+
+.sec-label{
+  display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--primary);font-weight:700;margin-bottom:8px;
+}
+.sec-title{font-size:clamp(22px,5vw,32px);font-weight:700;line-height:1.35;margin-bottom:12px}
+.sec-sub{font-size:14px;color:var(--muted)}
+.sec-center{text-align:center}
+
+/* ── Logo ── */
+.logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-hex{
+  width:40px;height:40px;background:var(--navy);
+  clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:11px;font-weight:700;flex-shrink:0;
+}
+.logo-main{font-size:17px;font-weight:700;color:var(--navy);display:block}
+.logo-sub {font-size:11px;color:var(--muted);display:block}
+
+/* ══════════════════════════
+   1. HEADER
+══════════════════════════ */
+header{
+  background:var(--white);border-bottom:1px solid var(--border);
+  position:sticky;top:0;z-index:100;padding:12px 0;
+}
+header .container{display:flex;align-items:center;justify-content:space-between;gap:12px}
+
+.header-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+
+.hours-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--card);color:var(--muted);font-size:11px;
+  padding:4px 10px;border-radius:20px;font-weight:500;white-space:nowrap;
+}
+.hours-badge .dot{width:6px;height:6px;border-radius:50%;background:#4CAF50;flex-shrink:0}
+
+.header-tel{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--primary);color:#fff;font-size:13px;font-weight:700;
+  padding:8px 14px;border-radius:6px;text-decoration:none;min-height:44px;transition:opacity .2s;
+}
+.header-tel:hover{opacity:.85}
+
+/* ══════════════════════════
+   2. HERO
+══════════════════════════ */
+#hero{padding:0;overflow:hidden}
+
+.hero-inner{display:flex;flex-direction:column}
+
+.hero-text{padding:48px 20px 40px;max-width:600px;margin:0 auto;width:100%}
+
+.hero-eyebrow{
+  display:inline-block;background:var(--card);color:var(--muted);
+  font-size:12px;padding:5px 14px;border-radius:20px;margin-bottom:20px;font-weight:500;
+}
+.hero-sub  {font-size:clamp(18px,4vw,24px);font-weight:700;color:var(--muted);margin-bottom:6px;line-height:1.3}
+.hero-title{font-size:clamp(34px,8vw,52px);font-weight:700;line-height:1.2;color:var(--text);margin-bottom:22px}
+.hero-title .accent{color:var(--primary)}
+.hero-body {font-size:14px;color:var(--muted);line-height:1.9;margin-bottom:32px}
+.hero-note {font-size:12px;color:var(--muted);text-align:center;margin-top:12px}
+
+.hero-image{
+  background:var(--card);display:flex;align-items:center;justify-content:center;
+  min-height:280px;overflow:hidden;
+}
+.hero-image img{max-height:340px;object-fit:contain;padding:28px}
+
+/* ══════════════════════════
+   3. PRICE TABLE
+══════════════════════════ */
+#prices{background:var(--white)}
+
+.price-cards{display:flex;flex-direction:column;gap:16px}
+
+.price-card{
+  background:var(--card);border-radius:12px;padding:20px;
+  display:flex;gap:16px;align-items:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+.price-card-img{
+  width:84px;height:84px;flex-shrink:0;background:var(--base);
+  border-radius:8px;display:flex;align-items:center;justify-content:center;padding:6px;overflow:hidden;
+}
+.price-card-img img{max-height:72px;object-fit:contain}
+.price-card-name{font-size:17px;font-weight:700;margin-bottom:3px}
+.price-card-ref {font-size:12px;color:var(--muted);margin-bottom:10px}
+.price-card-val {font-size:22px;font-weight:700;color:var(--primary)}
+.price-card-val small{font-size:13px;font-weight:400;color:var(--muted)}
+
+.price-gmt{
+  background:var(--base);border:1.5px dashed var(--border);border-radius:10px;
+  padding:16px 20px;font-size:14px;color:var(--muted);text-align:center;font-weight:500;
+  margin-top:4px;
+}
+.price-note{font-size:12px;color:var(--muted);margin-top:14px}
+
+/* ══════════════════════════
+   4. CONCERNS
+══════════════════════════ */
+#concerns{background:var(--card)}
+
+.concern-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:36px}
+
+.concern-card{
+  background:var(--white);border-radius:12px;padding:28px 20px;
+  text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+.concern-icon{
+  width:52px;height:52px;background:var(--card);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 16px;color:var(--primary);
+}
+.concern-text{font-size:15px;font-weight:700;line-height:1.55}
+
+.concern-cta{text-align:center}
+.concern-cta p{font-size:15px;font-weight:700;margin-bottom:20px}
+.concern-cta .btn{max-width:340px}
+
+/* ══════════════════════════
+   5. REASONS + FLOW
+══════════════════════════ */
+#reasons{background:var(--white)}
+
+.rf-wrap{display:flex;flex-direction:column;gap:48px}
+
+.rf-block h3{
+  font-size:18px;font-weight:700;margin-bottom:22px;
+  padding-bottom:10px;border-bottom:2px solid var(--border);
+}
+
+.reason-list{display:flex;flex-direction:column;gap:14px}
+
+.reason-item{
+  display:flex;align-items:flex-start;gap:14px;
+  background:var(--card);border-radius:10px;padding:18px;
+}
+.reason-ico{
+  width:40px;height:40px;flex-shrink:0;background:var(--white);
+  border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--primary);
+}
+.reason-item strong{font-size:15px;display:block;margin-bottom:4px}
+.reason-item span  {font-size:13px;color:var(--muted)}
+
+.flow-steps{display:flex;flex-direction:column}
+
+.flow-step{display:flex;gap:16px;align-items:flex-start;position:relative}
+.flow-step:not(:last-child){margin-bottom:32px}
+.flow-step:not(:last-child)::after{
+  content:'';position:absolute;left:19px;top:42px;bottom:-24px;
+  width:2px;background:var(--border);
+}
+.flow-num{
+  width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;
+  flex-shrink:0;position:relative;z-index:1;
+}
+.flow-body strong{font-size:15px;display:block;margin-bottom:4px}
+.flow-body span  {font-size:13px;color:var(--muted)}
+
+.flow-checklist{
+  margin-top:24px;background:var(--card);border-radius:10px;
+  padding:16px 18px;font-size:13px;color:var(--muted);line-height:1.9;
+}
+.flow-checklist strong{display:block;color:var(--text);margin-bottom:4px}
+
+/* ══════════════════════════
+   6. OTHER BRANDS
+══════════════════════════ */
+#brands{background:var(--card)}
+
+.brand-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+
+.brand-item{
+  background:var(--white);border-radius:8px;padding:14px 12px;
+  text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.05);
+}
+.brand-en{font-size:13px;font-weight:700;color:var(--text);line-height:1.3}
+.brand-ja{font-size:11px;color:var(--muted);margin-top:2px}
+
+.brands-note{
+  margin-top:18px;font-size:13px;color:var(--muted);
+  background:var(--white);border-radius:8px;padding:16px 18px;line-height:1.8;
+}
+
+/* ══════════════════════════
+   7. ACCESS
+══════════════════════════ */
+#access{background:var(--white)}
+
+.access-photo{border-radius:12px;overflow:hidden;margin-bottom:24px}
+.access-photo img{width:100%;height:220px;object-fit:cover}
+
+table.info-tbl{width:100%;border-collapse:collapse;font-size:14px}
+table.info-tbl tr{border-bottom:1px solid var(--border)}
+table.info-tbl tr:last-child{border-bottom:none}
+table.info-tbl th{padding:13px 0;color:var(--muted);font-weight:500;width:76px;vertical-align:top}
+table.info-tbl td{padding:13px 0}
+table.info-tbl a{color:var(--primary);font-weight:700;text-decoration:none}
+
+.map-box{
+  background:var(--card);border-radius:12px;height:220px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  color:var(--muted);font-size:13px;gap:8px;border:2px dashed var(--border);
+  margin-bottom:16px;
+}
+
+/* ══════════════════════════
+   8. DISCLAIMER
+══════════════════════════ */
+#disclaimer{background:var(--card);padding:40px 0}
+
+.disc-box{background:var(--white);border-radius:12px;padding:24px}
+.disc-title{font-size:14px;font-weight:700;margin-bottom:14px}
+
+.disc-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.disc-list li{
+  font-size:13px;color:var(--muted);padding-left:18px;
+  position:relative;line-height:1.7;
+}
+.disc-list li::before{content:'※';position:absolute;left:0;color:var(--primary)}
+
+/* ══════════════════════════
+   9. FOOTER CTA
+══════════════════════════ */
+#footer-cta{background:var(--navy);text-align:center;padding:64px 0}
+
+.fcta-title{font-size:clamp(22px,5vw,30px);font-weight:700;color:#fff;line-height:1.5;margin-bottom:10px}
+.fcta-sub  {font-size:14px;color:rgba(255,255,255,.7);margin-bottom:36px}
+
+#footer-cta .btn-outline{border-color:rgba(255,255,255,.4);color:#fff}
+#footer-cta .btn-outline:hover{background:rgba(255,255,255,.1);color:#fff}
+#footer-cta .btn-group{align-items:center}
+#footer-cta .btn{max-width:360px}
+
+footer{
+  background:#06063F;padding:28px 0;text-align:center;
+  font-size:12px;color:rgba(255,255,255,.45);
+}
+footer p{margin-bottom:5px}
+.footer-brand{color:rgba(255,255,255,.8);font-size:14px;font-weight:700;margin-bottom:10px}
+.trademark{margin-top:14px;font-size:11px;line-height:1.8}
+
+/* ══════════════════════════
+   10. FLOATING CTA
+══════════════════════════ */
+.floating-cta{
+  position:fixed;bottom:0;left:0;right:0;
+  background:var(--white);border-top:1px solid var(--border);
+  padding:10px 16px;display:flex;gap:10px;z-index:200;
+  box-shadow:0 -2px 12px rgba(0,0,0,.1);
+}
+.floating-cta .btn{flex:1;padding:13px 10px;font-size:14px;border-radius:8px}
+
+/* ══════════════════════════
+   DESKTOP 768px+
+══════════════════════════ */
+@media(min-width:768px){
+  body{padding-bottom:0}
+  section{padding:80px 0}
+
+  .hero-inner{flex-direction:row;align-items:stretch;min-height:500px}
+  .hero-text{padding:60px 52px 60px 0;margin:0;flex:1;max-width:none}
+  .hero-image{flex:0 0 46%;min-height:420px}
+  .hero-image img{max-height:100%;height:100%}
+
+  .btn-group{flex-direction:row}
+  .btn{width:auto}
+
+  .price-cards{flex-direction:row;gap:20px}
+  .price-card{flex:1;flex-direction:column;text-align:center}
+  .price-card-img{margin:0 auto 14px;width:100px;height:100px}
+  .price-card-img img{max-height:86px}
+
+  .concern-grid{grid-template-columns:repeat(3,1fr)}
+
+  .rf-wrap{flex-direction:row;gap:48px}
+  .rf-block{flex:1}
+
+  .brand-grid{grid-template-columns:repeat(4,1fr)}
+
+  .access-cols{display:flex;gap:36px}
+  .access-cols > *{flex:1}
+  .access-photo{margin-bottom:0;height:200px}
+  .access-photo img{height:200px}
+  .map-box{height:260px;margin-bottom:16px}
+
+  #footer-cta .btn-group{flex-direction:row;justify-content:center}
+
+  .floating-cta{
+    left:auto;bottom:24px;right:24px;
+    flex-direction:column;width:200px;
+    border-radius:12px;border:1px solid var(--border);
+    padding:12px;gap:8px;box-shadow:0 4px 20px rgba(0,0,0,.15);
+  }
+  .floating-cta .btn{flex:none;width:100%}
+}
+
+@media(min-width:1024px){
+  .price-cards{gap:28px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════
+     1. HEADER
+══════════════════════ -->
+<header>
+  <div class="container">
+    <a href="#" class="logo-wrap">
+      <div class="logo-hex">大吉</div>
+      <div>
+        <span class="logo-main">買取大吉</span>
+        <span class="logo-sub">郡山コスモス通り店</span>
+      </div>
+    </a>
+    <div class="header-right">
+      <span class="hours-badge">
+        <span class="dot"></span>
+        10:00–19:00 ／ 日曜定休
+      </span>
+      <a href="tel:024-973-6661" class="header-tel">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+        024-973-6661
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════
+     2. HERO
+══════════════════════ -->
+<section id="hero">
+  <div class="hero-inner container">
+    <div class="hero-text">
+      <span class="hero-eyebrow">ロレックス売却をご検討の方へ</span>
+      <p class="hero-sub">ピークは、過ぎた。</p>
+      <h1 class="hero-title">ロレックス、<br><span class="accent">今が売り時？</span></h1>
+      <p class="hero-body">
+        2022年の高騰相場から、足元はゆるやかに下落。<br>
+        高値のうちが、ひとつの売り時です。<br>
+        まずは査定だけでも、お気軽にどうぞ。
+      </p>
+      <div class="btn-group">
+        <a href="tel:024-973-6661" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+          電話で査定・来店予約
+        </a>
+        <a href="https://share.google/IbIZj6Jhbqv5SJjpZ" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Googleマップでルートを検索
+        </a>
+      </div>
+      <p class="hero-note">査定無料・売却不要・しつこい営業なし</p>
+    </div>
+    <div class="hero-image">
+      <img src="assets/products/daytona_116500ln.png" alt="ROLEX DAYTONA Ref.116500LN">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════
+     3. PRICE TABLE
+══════════════════════ -->
+<section id="prices">
+  <div class="container">
+    <div style="margin-bottom:32px">
+      <span class="sec-label">REFERENCE PRICE</span>
+      <h2 class="sec-title">代表モデルの相場目安</h2>
+      <p class="sec-sub">現在の買取市場における参考価格です</p>
+    </div>
+    <div class="price-cards">
+      <div class="price-card">
+        <div class="price-card-img">
+          <img src="assets/products/daytona_116500ln.png" alt="DAYTONA Ref.116500LN">
+        </div>
+        <div>
+          <div class="price-card-name">DAYTONA</div>
+          <div class="price-card-ref">Ref. 116500LN</div>
+          <div class="price-card-val">¥3,700,000〜<small>（相場目安）</small></div>
+        </div>
+      </div>
+      <div class="price-card">
+        <div class="price-card-img">
+          <img src="assets/products/submariner_114060_ref.jpg" alt="SUBMARINER Ref.114060" loading="lazy">
+        </div>
+        <div>
+          <div class="price-card-name">SUBMARINER</div>
+          <div class="price-card-ref">Ref. 114060</div>
+          <div class="price-card-val">¥1,300,000〜<small>（相場目安）</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="price-gmt">＋ GMTマスターII など他モデルもお気軽にご相談ください</div>
+    <p class="price-note">※上記は相場目安です。確定金額は査定にてご案内します。</p>
+  </div>
+</section>
+
+<!-- ══════════════════════
+     4. CONCERNS
+══════════════════════ -->
+<section id="concerns">
+  <div class="container">
+    <div class="sec-center" style="margin-bottom:36px">
+      <span class="sec-label">ARE YOU THINKING...</span>
+      <h2 class="sec-title">こんなこと、<br>思っていませんか？</h2>
+    </div>
+    <div class="concern-grid">
+      <div class="concern-card">
+        <div class="concern-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+            <polyline points="16 7 22 7 22 13"/>
+          </svg>
+        </div>
+        <p class="concern-text">買った時より<br>価値が上がっているかも</p>
+      </div>
+      <div class="concern-card">
+        <div class="concern-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"/>
+            <polyline points="1 20 1 14 7 14"/>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+          </svg>
+        </div>
+        <p class="concern-text">新しいモデルに<br>買い替えたい</p>
+      </div>
+      <div class="concern-card">
+        <div class="concern-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </div>
+        <p class="concern-text">メンテ費用の<br>負担が気になる</p>
+      </div>
+    </div>
+    <div class="concern-cta">
+      <p>そのお悩み、まず査定額を見てから考えませんか？</p>
+      <div class="btn-group" style="justify-content:center">
+        <a href="tel:024-973-6661" class="btn btn-primary concern-cta">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+          無料査定のお問い合わせ
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════
+     5. REASONS + FLOW
+══════════════════════ -->
+<section id="reasons">
+  <div class="container">
+    <div style="margin-bottom:36px">
+      <span class="sec-label">WHY CHOOSE US</span>
+      <h2 class="sec-title">選ばれる理由と<br>ご利用の流れ</h2>
+    </div>
+    <div class="rf-wrap">
+
+      <div class="rf-block">
+        <h3>選ばれる3つの理由</h3>
+        <div class="reason-list">
+          <div class="reason-item">
+            <div class="reason-ico">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+            </div>
+            <div>
+              <strong>査定の透明性</strong>
+              <span>根拠を丁寧に説明。「なぜこの金額か」を納得いただける査定を心がけています。</span>
+            </div>
+          </div>
+          <div class="reason-item">
+            <div class="reason-ico">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <strong>地域密着の実績</strong>
+              <span>郡山エリアで長年の買取実績。地域のお客様に信頼いただいています。</span>
+            </div>
+          </div>
+          <div class="reason-item">
+            <div class="reason-ico">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+            </div>
+            <div>
+              <strong>古物商許可取得済み</strong>
+              <span>福島県公安委員会許可。法令を遵守した安心・安全な買取を行っています。</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rf-block">
+        <h3>ご利用の流れ</h3>
+        <div class="flow-steps">
+          <div class="flow-step">
+            <div class="flow-num">1</div>
+            <div class="flow-body">
+              <strong>ご来店・無料査定</strong>
+              <span>お時計をお持ちいただくだけ。査定は完全無料です。事前のお電話も歓迎。</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">2</div>
+            <div class="flow-body">
+              <strong>ご納得いただければその場で現金買取</strong>
+              <span>査定金額にご同意いただけた場合のみお支払い。売らなくても費用はかかりません。</span>
+            </div>
+          </div>
+        </div>
+        <div class="flow-checklist">
+          <strong>ご来店時の持参物</strong>
+          お時計本体 ／ 身分証明書（運転免許証など）<br>
+          箱・保証書（あれば査定額UP）
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════
+     6. OTHER BRANDS
+══════════════════════ -->
+<section id="brands">
+  <div class="container">
+    <div style="margin-bottom:32px">
+      <span class="sec-label">ALL BRANDS WELCOME</span>
+      <h2 class="sec-title">その他ブランド時計も<br>高価買取中</h2>
+    </div>
+    <div class="brand-grid">
+      <div class="brand-item"><div class="brand-en">OMEGA</div><div class="brand-ja">オメガ</div></div>
+      <div class="brand-item"><div class="brand-en">CARTIER</div><div class="brand-ja">カルティエ</div></div>
+      <div class="brand-item"><div class="brand-en">TAG HEUER</div><div class="brand-ja">タグ・ホイヤー</div></div>
+      <div class="brand-item"><div class="brand-en">IWC</div><div class="brand-ja">IWC</div></div>
+      <div class="brand-item"><div class="brand-en">BREITLING</div><div class="brand-ja">ブライトリング</div></div>
+      <div class="brand-item"><div class="brand-en">PANERAI</div><div class="brand-ja">パネライ</div></div>
+      <div class="brand-item"><div class="brand-en">AUDEMARS<br>PIGUET</div><div class="brand-ja">オーデマ ピゲ</div></div>
+      <div class="brand-item"><div class="brand-en">GRAND<br>SEIKO</div><div class="brand-ja">グランドセイコー</div></div>
+    </div>
+    <div class="brands-note">
+      ＋ パテック フィリップなど上記以外のブランドもお気軽に。<br>
+      動かない・保証書なし・付属品なしでもご相談OK。
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════
+     7. ACCESS
+══════════════════════ -->
+<section id="access">
+  <div class="container">
+    <div style="margin-bottom:32px">
+      <span class="sec-label">STORE INFO</span>
+      <h2 class="sec-title">店舗情報・アクセス</h2>
+    </div>
+    <div class="access-cols">
+      <div>
+        <div class="access-photo">
+          <img src="assets/store/storefront_main.jpg" alt="買取大吉 郡山コスモス通り店 外観" loading="lazy">
+        </div>
+        <table class="info-tbl" style="margin-top:20px">
+          <tr><th>店舗名</th><td>買取大吉 郡山コスモス通り店</td></tr>
+          <tr><th>電話</th><td><a href="tel:024-973-6661">024-973-6661</a></td></tr>
+          <tr><th>住所</th><td>〒963-0205<br>福島県郡山市堤3丁目136 小林ビル102</td></tr>
+          <tr><th>営業時間</th><td>10:00〜19:00</td></tr>
+          <tr><th>定休日</th><td>日曜日</td></tr>
+        </table>
+      </div>
+      <div>
+        <!-- TODO: Google Maps iframe embed -->
+        <div class="map-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Googleマップ埋め込み枠（後日実装）
+        </div>
+        <a href="https://share.google/IbIZj6Jhbqv5SJjpZ" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Googleマップでルートを検索
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════
+     8. DISCLAIMER
+══════════════════════ -->
+<section id="disclaimer">
+  <div class="container">
+    <div class="disc-box">
+      <div class="disc-title">ご来店時のお願い・許認可</div>
+      <ul class="disc-list">
+        <li>ご来店時は身分証明書（運転免許証・マイナンバーカード等）をご持参ください。</li>
+        <li>古物営業法に基づき、本人確認をお願いする場合があります。</li>
+        <li>福島県公安委員会 古物商許可 第251080004882号</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════
+     9. FOOTER CTA
+══════════════════════ -->
+<section id="footer-cta">
+  <div class="container">
+    <p class="fcta-title">「いくらになるか見るだけ」<br>も大歓迎です。</p>
+    <p class="fcta-sub">売る・売らないは、査定を見てから決めてOK。</p>
+    <div class="btn-group">
+      <a href="tel:024-973-6661" class="btn btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+        電話で査定・来店予約
+      </a>
+      <a href="https://share.google/IbIZj6Jhbqv5SJjpZ" target="_blank" rel="noopener" class="btn btn-outline">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Googleマップでルートを検索
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="footer-brand">買取大吉 郡山コスモス通り店</p>
+    <p>〒963-0205 福島県郡山市堤3丁目136 小林ビル102</p>
+    <p><a href="tel:024-973-6661" style="color:rgba(255,255,255,.6);text-decoration:none">TEL: 024-973-6661</a> ／ 10:00〜19:00（日曜定休）</p>
+    <p class="trademark">
+      ※ロレックス、デイトナ、サブマリーナー等は各社の登録商標です。当店はロレックス社とは無関係の買取専門店です。<br>
+      ※オメガ、カルティエ、タグ・ホイヤー等のブランド名は各社の登録商標です。<br>
+      &copy; 買取大吉 郡山コスモス通り店
+    </p>
+  </div>
+</footer>
+
+<!-- ══════════════════════
+     10. FLOATING CTA
+══════════════════════ -->
+<div class="floating-cta">
+  <a href="tel:024-973-6661" class="btn btn-primary">
+    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+    電話する
+  </a>
+  <a href="https://share.google/IbIZj6Jhbqv5SJjpZ" target="_blank" rel="noopener" class="btn btn-navy">
+    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    Googleマップ
+  </a>
+</div>
+
+</body>
+</html>
